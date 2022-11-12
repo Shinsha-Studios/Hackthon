@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<header>
+<link rel="stylesheet" href="MainPageCSS.css"type="text/css"/>
+
+
+</header>
+
+<body>
+<div id="heeed">
+<a href="FinancialMainPage.html"><img id="logo" src="Logo.jpg" align="left"></a>Financial Independence Calculator
+<div id="subtext">Construct a roadmap for financial independence.</div></div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<table class="TableBody">
+	<tr>
+		<th>
+			User financial inputs
+		</th>
+		<th>
+			Emergency fund
+		</th>
+		<th>
+			Rainy day fund
+		</th>
+		<th>
+			Investment opportunity predictions
+		</th>
+	</tr>
+	<tr class="TableBody">
+		<td class="TableBody">
+			<input type="text" placeholder="Monthly Income" name="monthlyEarn" class="IncomeInput">	
+		</td>
+		<td class="TableBody">
+			test11
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<input type="text" placeholder="Monthly Expenses" name="monthlyExpend" class="ExpenseInput">
+		</td>
+	</tr>
+</table>
+<div class="sliders">
+	Emergency fund saving range: <span id="emergencyFundRangeVal"></span> months.
+	<br>
+	<input type="range" min="12" max="24" value="18" class="slider" id="emrgencyFundRange">
+	<br>
+	Rainy day savings range: <span id="rainyDayRangeVal"></span> months.
+	<br>
+	<input type="range" min="1" max="8" value="4" class="rainyDaySlider" id="ranyDayRange">
+</div>
+</body>
+</html>
