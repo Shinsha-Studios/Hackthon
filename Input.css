@@ -30,6 +30,10 @@
     float: right;
 }
 
+.card-text{
+    float: left;
+}
+
 #NavBar{
 	width: 100%;
 	background-color: aqua;
@@ -38,4 +42,12 @@
 .HyperText{
 	text-decoration: none;
 	color: black;
+}
+
+#CardDiv{
+    width: 120%;
+}
+
+#netIncome{
+    float: right;
 }

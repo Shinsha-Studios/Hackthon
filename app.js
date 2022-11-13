@@ -32,19 +32,43 @@ rFundSlider.oninput = function () {
 calcBttn.addEventListener("click", () => {
   const monthlyExpense = monthlyExpenseInput.value;
   const monthlyIncome = monthlyIncomeInput.value;
-  const netIncome = CalcNetEarnings(monthlyIncome, monthlyExpense);
-  getStockData();
-  getStockData();
+
+  if(monthlyIncome > monthlyExpense) {
+    const netIncome = CalcNetEarnings(monthlyIncome, monthlyExpense);
+    const investTime = timeToInvest(netIncome, monthlyExpense);
+  
+    let output = document.querySelector("#netIncome");
+    output.innerHTML = netIncome;
+    output = document.querySelector("#netExpenses");
+    output.innerHTML = monthlyExpense;
+    output = document.querySelector("#independentTime"); 
+    output.innerHTML = investTime;
+  
+    getEFund(monthlyExpense, netIncome, eFundSlider.value);
+    getRFund(monthlyExpense, netIncome, rFundSlider.value);
+  } else {
+    output = document.querySelector("#error");
+    output.innerHTML = "Income must be greater than expense";
+  }
+
 });
 
 // Display the results for emergency fund
-function eFund(monthlyExpense, eFundVal, netIncome) {
-  const eFundCap = CalcFundCapacity(monthlyExpense, eFundVal);
+function getEFund(monthlyExpense, netIncome, months) {
+  const eFundCap = CalcFundCapacity(monthlyExpense, months);
   const eFundTime = CalculateMonths(eFundCap, netIncome);
+  let output = document.querySelector("#eFundCap");
+  output.innerHTML = eFundCap;
+  output = document.querySelector("#eFundTime");
+  output.innerHTML = eFundTime;
 }
 
 // Display the results for rainy day fund
-function rFund(netIncome, monthlyExpense, rFundVal) {
-  const rfundTime = CalculateMonths(rFundCap, netIncome);
-  const rFundCap = CalcFundCapacity(monthlyExpense, rFundVal);
+function getRFund(monthlyExpense, netIncome, months) {
+  const rFundCap = CalcFundCapacity(monthlyExpense, months);
+  const rFundTime = CalculateMonths(rFundCap, netIncome);
+  let output = document.querySelector("#rFundCap");
+  output.innerHTML = rFundCap;
+  output = document.querySelector("#rFundTime");
+  output.innerHTML = rFundTime;
 }
