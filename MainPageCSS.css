@@ -1,7 +1,14 @@
 #heeed{
-	font-family: Cafe;
 	font-size: 50px;
+	margin: auto;
+	padding: 2px;
+	width: 50%;
 }
+
+#HeadText{
+	text-align: center;
+}
+
 #logo{
 	width: 8%;
 	/*vertical-align: top;*/
@@ -10,10 +17,11 @@
 #subtext{
 	font-size: 20px;
 	vertical-align: top;
+	text-align: center;
 }
 
 #TextDiv{
-	font-size: 24;
+	font-size: 24px;
 	margin: auto;
 	width: 60%;
 	padding: 10px;
@@ -38,5 +46,22 @@
 
 #CardDiv2{
 	float: left;
-	margin-right: 100px;
+	margin: auto;
+}
+
+#CardDiv3{
+	margin: auto;
+}
+
+.row{
+}
+
+#NavBar{
+	width: 100%;
+	background-color: aqua;
+}
+
+.HyperText{
+	text-decoration: none;
+	color: black;
 }

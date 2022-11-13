@@ -9,11 +9,23 @@
     <link rel="stylesheet" href="Input.css" type="text/css" />
 </head>
 
+<header id="NavBar">
+	<div class="container text-center">
+		<div class="row">
+		  <div class="col">
+			<a href="FinancialMainPage.html" class="HyperText">Home</a>
+		  </div>
+		  <div class="col">
+			<a href="Input.html" class="HyperText">Calculator</a>
+		  </div>
+		</div>
+	  </div>
+</header>
+
 
 <body>
     <div id="heeed">
-        <a href="FinancialMainPage.html"><img id="logo" src="Logo.jpg" align="left"></a>Financial Independence
-        Calculator
+        <p id="HeadText">Financial Independence Calculator</p>
         <div id="subtext">Construct a roadmap for financial independence.</div>
     </div>
     <br>
@@ -49,8 +61,22 @@
         <div class="card-body">
           <h5 class="card-title">Your results</h5>
           <p class="card-text">Your net income:</p>
-          <p class="card-text">Output2:</p>
-
+          <p class="result" id="netIncome"></p>
+          <p class="card-text">Your net expenses:</p>
+          <p class="result" id="netExpenses"></p>
+          <p class="card-text">Your emergency fund cap:</p>
+          <p class="result" id="eFundCap"></p>
+          <p class="card-text">Your rainy day fund cap:</p>
+          <p class="result" id="rFundCap"></p>
+          <br>
+          <p class="card-text">Time to fill emergency fund:</p>
+          <p class="result" id="eFundTime"></p>
+          <p class="card-text">Time to fill rainy day fund:</p>
+          <p class="result" id="rFundTime"></p>
+          <br>
+          <br>
+          <p class="card-text" id="UltimateTime">Time reach financial independence:</p>
+          <p class="result" id="independentTime"></p>
           <a href="#" class="btn btn-primary">Go somewhere</a>
         </div>
       </div>

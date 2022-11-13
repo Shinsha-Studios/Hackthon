@@ -7,13 +7,35 @@
 
 #heeed{
 	font-size: 50px;
+    margin: auto;
+    width: 50%;
+}
+
+#HeadText{
+    text-align: center;
 }
 
 #subtext{
 	font-size: 20px;
 	vertical-align: top;
+    text-align: center;
 }
 
-#CardDiv{
+#UltimateTime{
+    font-style: bold;
+    font-size: 24;
+}
 
+.result{
+    float: right;
+}
+
+#NavBar{
+	width: 100%;
+	background-color: aqua;
+}
+
+.HyperText{
+	text-decoration: none;
+	color: black;
 }
