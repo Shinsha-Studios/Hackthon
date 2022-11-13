@@ -65,7 +65,11 @@ input[type="range"]::-moz-range-track {
 }
 
 #card-text2{
-    margin-right: 90px;
+    margin-right: 140px;
+}
+
+#card-text4{
+    margin-right:  140px;
 }
 
 #NavBar{
