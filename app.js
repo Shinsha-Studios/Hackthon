@@ -21,19 +21,16 @@ eFundVal.innerHTML = eFundSlider.value;
 rFundVal.innerHTML = rFundSlider.value;
 // event called when slider is moved
 eFundSlider.oninput = function () {
-  eFundVal.innerHTML = `$${eFundSlider.value}`;
+  eFundVal.innerHTML = `${eFundSlider.value}`;
 };
 rFundSlider.oninput = function () {
-  rFundVal.innerHTML = `$${rFundSlider.value}`;
+  rFundVal.innerHTML = `${rFundSlider.value}`;
 };
 
 calcBttn.addEventListener("click", () => {
   const monthlyExpense = monthlyExpenseInput.value;
   const monthlyIncome = monthlyIncomeInput.value;
-  console.log(monthlyExpense.value);
 
-  //let output = document.querySelector("#error");
-  //output.innerHTML = " ";
   if(parseInt(monthlyIncome) > parseInt(monthlyExpense)) {
     const netIncome = CalcNetEarnings(monthlyIncome, monthlyExpense);
     const investTime = timeToInvest(netIncome, monthlyExpense);
@@ -45,7 +42,7 @@ calcBttn.addEventListener("click", () => {
     output = document.querySelector("#netExpenses");
     output.innerHTML = `$${monthlyExpense}`;
     output = document.querySelector("#independentTime"); 
-    output.innerHTML = `${investTime} years`;
+    output.innerHTML = `${investTime} year(s)`;
   
     getEFund(monthlyExpense, netIncome, eFundSlider.value);
     getRFund(monthlyExpense, netIncome, rFundSlider.value);
