@@ -1,0 +1,30 @@
+#heeed{
+	font-family: Cafe;
+	font-size: 50px;
+}
+#logo{
+	width: 8%;
+	/*vertical-align: top;*/
+}
+
+#subtext{
+	font-size: 20px;
+	vertical-align: top;
+}
+
+#TextDiv{
+	font-size: 24;
+	margin: auto;
+	width: 60%;
+	padding: 10px;
+}
+
+#ButtonDiv{
+	margin: auto;
+	width: 60%;
+	padding: 10px;
+}
+
+.mybtn{
+	width: 100%;
+}
