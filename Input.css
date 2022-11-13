@@ -1,3 +1,7 @@
+body {
+    background-color: #E5E5E5;
+}
+
 #mainDiv{
     float: left;
     width: 50%;
@@ -21,6 +25,20 @@
     text-align: center;
 }
 
+#bttn-calc{
+    background-color: #14213D;
+}
+
+#bttn-calc:hover{
+	background-color: #0f2b63;
+}
+
+input[type="range"]::-moz-range-progress {
+    background-color: #14213D; 
+  }
+
+
+
 #UltimateTime{
     font-style: bold;
     font-size: 24;
@@ -28,24 +46,26 @@
 
 .result{
     float: right;
+    margin: 10px;
 }
 
 .card-text{
     float: left;
+    margin: 10px;
+}
+
+#card-text2{
+    margin-right: 90px;
 }
 
 #NavBar{
 	width: 100%;
-	background-color: aqua;
+	background-color: #FCA311;
 }
 
 .HyperText{
 	text-decoration: none;
 	color: black;
-}
-
-#CardDiv{
-    width: 120%;
 }
 
 #netIncome{
@@ -68,4 +88,15 @@
     font-size: 10px;
     position: fixed;
     bottom: 0;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }

@@ -57,24 +57,29 @@
 
     </div>
 
-    <div class="card" style="width: 18rem;" id="CardDiv">
+    <div class="card" style="width: 25rem;" id="CardDiv">
         <div class="card-body">
           <h5 class="card-title">Your results</h5>
-          <p class="card-text">Your net income: </p>
+
+          <p class="card-text" id="card-text1">Your net income:</p>
           <p class="result" id="netIncome"></p>
-          <p class="card-text">Your net expenses:</p>
+          
+          <p class="card-text" id="card-text2">Your net expenses:</p>
           <p class="result" id="netExpenses"></p>
+          
           <p class="card-text">Your emergency fund cap:</p>
           <p class="result" id="eFundCap"></p>
+          
           <p class="card-text">Your rainy day fund cap:</p>
           <p class="result" id="rFundCap"></p>
-          <br>
-          <p class="card-text">Time to fill emergency fund is filled:</p>
+          
+          <p class="card-text">Time until emergency fund is filled:</p>
           <p class="result" id="eFundTime"></p>
-          <p class="card-text">Time to fill rainy day fund is filled:</p>
+            
+          <p class="card-text">Time until rainy day fund is filled:</p>
           <p class="result" id="rFundTime"></p>
-          <br>
-          <br>
+          
+          
           <p class="card-text" id="UltimateTime">Time reach financial independence:</p>
           <p class="result" id="independentTime"></p>
         </div>
@@ -83,7 +88,7 @@
     <script type="module" src="app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
 
-    <p id="advice">This is not investment advice and investing has inherent risks. Do you own research or consult a professional before investing.</p>
+    <p id="advice">This is not investment advice and investing has inherent risks. Do your own research or consult a professional before investing.</p>
 </body>
 
 </html>
