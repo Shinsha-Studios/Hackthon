@@ -1,7 +1,6 @@
 import {
   CalcFundCapacity,
   CalcNetEarnings,
-  Calculate,
   CalculateMonths,
 } from "./Scripts/Calculation.js";
 

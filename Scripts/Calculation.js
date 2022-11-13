@@ -1,6 +1,3 @@
-// e fund = emergency fund
-// r fund = rainy day fund
-
 function CalcFundCapacity(expenses, months) {
     return (expenses * months);
 }
