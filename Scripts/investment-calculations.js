@@ -50,6 +50,7 @@ function makeChart() {
       ],
     },
   });
+
   monthlyIncomeInput.addEventListener("click", () => {
     clearChart(myChart);
   });
