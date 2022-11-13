@@ -33,11 +33,15 @@ calcBttn.addEventListener("click", () => {
   const monthlyExpense = monthlyExpenseInput.value;
   const monthlyIncome = monthlyIncomeInput.value;
 
-  if(monthlyIncome > monthlyExpense) {
+  //let output = document.querySelector("#error");
+  //output.innerHTML = " ";
+  if(parseInt(monthlyIncome) > parseInt(monthlyExpense)) {
     const netIncome = CalcNetEarnings(monthlyIncome, monthlyExpense);
     const investTime = timeToInvest(netIncome, monthlyExpense);
-  
-    let output = document.querySelector("#netIncome");
+    
+    let output = document.querySelector("#error");
+    output.innerHTML = " ";
+    output = document.querySelector("#netIncome");
     output.innerHTML = netIncome;
     output = document.querySelector("#netExpenses");
     output.innerHTML = monthlyExpense;
@@ -47,7 +51,7 @@ calcBttn.addEventListener("click", () => {
     getEFund(monthlyExpense, netIncome, eFundSlider.value);
     getRFund(monthlyExpense, netIncome, rFundSlider.value);
   } else {
-    output = document.querySelector("#error");
+    let output = document.querySelector("#error");
     output.innerHTML = "Income must be greater than expense";
   }
 
