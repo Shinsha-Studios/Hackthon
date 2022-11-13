@@ -1,8 +1,8 @@
 #mainDiv{
-    margin-top: 50px;
-    margin-left: 400px;
-    margin-right: 400px;
-
+    float: left;
+    width: 50%;
+    margin-right: 350px;
+    margin-left: 50px;
 }
 
 #heeed{
@@ -12,4 +12,8 @@
 #subtext{
 	font-size: 20px;
 	vertical-align: top;
+}
+
+#CardDiv{
+
 }

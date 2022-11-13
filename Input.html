@@ -9,13 +9,17 @@
     <link rel="stylesheet" href="Input.css" type="text/css" />
 </head>
 
+
 <body>
     <div id="heeed">
         <a href="FinancialMainPage.html"><img id="logo" src="Logo.jpg" align="left"></a>Financial Independence
         Calculator
         <div id="subtext">Construct a roadmap for financial independence.</div>
     </div>
-
+    <br>
+    <br>
+    <br>
+    <br>
 
     <div id="mainDiv">
         <h1>Enter</h1>
@@ -32,14 +36,26 @@
         <div class="sliders">
             Emergency fund saving range: <span id="emergencyFundRangeVal"></span> months.
             <br>
-            <input type="range" class="form-range" min="12" max="24" id="customRange2">
+            <input type="range" class="form-range" min="12" max="24" id="emergencySlider">
             Rainy day savings range: <span id="rainyDayRangeVal"></span> months.
             <br>
-            <input type="range" min="1" max="8" class="form-range" id="customRange1">
+            <input type="range" min="1" max="8" class="form-range" id="rainySlider">
         </div>
         <a class="btn btn-primary" href="Output.html" role="button" id="bttn-calc">Calculate</a>
 
     </div>
+
+    <div class="card" style="width: 18rem;" id="CardDiv">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Your results</h5>
+          <p class="card-text">Your net income:</p>
+          <p class="card-text">Output2:</p>
+
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+
     <source src="app.js">
 </body>
 
