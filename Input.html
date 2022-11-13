@@ -32,21 +32,20 @@
         <br>
         <br>
         <input type="number" class="form-control" id="monthly-expense" placeholder="Monthly Expenses">
-
+        <br>
         <div class="sliders">
             Emergency fund saving range: <span id="emergencyFundRangeVal"></span> months.
             <br>
             <input type="range" class="form-range" min="12" max="24" id="emergencySlider">
             Rainy day savings range: <span id="rainyDayRangeVal"></span> months.
             <br>
-            <input type="range" min="1" max="8" class="form-range" id="rainySlider">
+            <input type="range" min="3" max="6" class="form-range" id="rainySlider">
         </div>
-        <a class="btn btn-primary" href="Output.html" role="button" id="bttn-calc">Calculate</a>
+        <a class="btn btn-primary" role="button" id="bttn-calc">Calculate</a>
 
     </div>
 
     <div class="card" style="width: 18rem;" id="CardDiv">
-        <img src="..." class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">Your results</h5>
           <p class="card-text">Your net income:</p>
@@ -56,7 +55,7 @@
         </div>
       </div>
 
-    <source src="app.js">
+    <script type="module" src="app.js"></script>
 </body>
 
 </html>

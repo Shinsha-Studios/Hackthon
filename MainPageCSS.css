@@ -27,4 +27,16 @@
 
 .mybtn{
 	width: 100%;
+	
+}
+
+#CardDiv{
+	float: left;
+	margin-right: 100px;
+	margin-left: 400px;
+}
+
+#CardDiv2{
+	float: left;
+	margin-right: 100px;
 }
