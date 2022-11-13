@@ -27,34 +27,41 @@ rFundSlider.oninput = function () {
   rFundVal.innerHTML = `${rFundSlider.value}`;
 };
 
+monthlyIncomeInput.addEventListener("click", () => {
+  monthlyIncomeInput.value = null;
+});
+
+monthlyExpenseInput.addEventListener("click", () => {
+  monthlyExpenseInput.value = null;
+});
+
 calcBttn.addEventListener("click", () => {
   const monthlyExpense = monthlyExpenseInput.value;
   const monthlyIncome = monthlyIncomeInput.value;
 
-  if(parseInt(monthlyIncome) > parseInt(monthlyExpense)) {
+  if (parseInt(monthlyIncome) > parseInt(monthlyExpense)) {
     const netIncome = CalcNetEarnings(monthlyIncome, monthlyExpense);
     const investTime = timeToInvest(netIncome, monthlyExpense);
-    
+
     let output = document.querySelector("#error");
     output.innerHTML = " ";
     output = document.querySelector("#netIncome");
     output.innerHTML = `$${netIncome}`;
     output = document.querySelector("#netExpenses");
     output.innerHTML = `$${monthlyExpense}`;
-    output = document.querySelector("#independentTime"); 
+    output = document.querySelector("#independentTime");
     output.innerHTML = `${investTime} year(s)`;
-  
+
     getEFund(monthlyExpense, netIncome, eFundSlider.value);
     getRFund(monthlyExpense, netIncome, rFundSlider.value);
-  } else if(parseInt(monthlyIncome) <= parseInt(monthlyExpense)) {
+  } else if (parseInt(monthlyIncome) <= parseInt(monthlyExpense)) {
     let output = document.querySelector("#error");
     output.innerHTML = "Income must be greater than expense";
-  } 
-  else {
+  } else {
     let output = document.querySelector("#error");
-    output.innerHTML = "Monthly Income and Monthly Expenses are required fields";
+    output.innerHTML =
+      "Monthly Income and Monthly Expenses are required fields";
   }
-
 });
 
 // Display the results for emergency fund
