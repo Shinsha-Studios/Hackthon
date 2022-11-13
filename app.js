@@ -52,8 +52,8 @@ function getEFund(monthlyExpense, netIncome, months) {
   const eFundCap = CalcFundCapacity(monthlyExpense, months);
   const eFundTime = CalculateMonths(eFundCap, netIncome);
   let output = document.querySelector("#eFundCap");
-  output = document.querySelector("#eFundTime");
   output.innerHTML = eFundCap;
+  output = document.querySelector("#eFundTime");
   output.innerHTML = eFundTime;
 }
 
@@ -62,7 +62,7 @@ function getRFund(monthlyExpense, netIncome, months) {
   const rFundCap = CalcFundCapacity(monthlyExpense, months);
   const rFundTime = CalculateMonths(rFundCap, netIncome);
   let output = document.querySelector("#rFundCap");
+  output.innerHTML = rFundCap;
   output = document.querySelector("#rFundTime");
-  ouput.innerHTML = rFundCap;
   output.innerHTML = rFundTime;
 }
