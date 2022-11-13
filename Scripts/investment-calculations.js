@@ -26,3 +26,5 @@ function timeToInvest(contributionsPerMonth, totalExpense) {
 
   return yrs;
 }
+
+export { amtToRetire, timeToInvest };
