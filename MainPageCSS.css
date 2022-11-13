@@ -45,6 +45,10 @@
 	float: left;
 }
 
+.card-body{
+	width: 120%;
+}
+
 #CardDiv2{
 	float: left;
 	margin-left: 100px;
