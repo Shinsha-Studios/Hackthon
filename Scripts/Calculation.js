@@ -9,7 +9,7 @@ function CalcNetEarnings(income, expenses) {
 //Begin calculations (user has pressed calculate)
 function CalculateMonths(capacity, netIncome) {
     let months = 0;
-    for(let i = eFundCapacity; i > 0; i -= netIncome) {
+    for(let i = capacity; i > 0; i -= netIncome) {
         months++;
     }
     return months;

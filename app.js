@@ -33,18 +33,36 @@ calcBttn.addEventListener("click", () => {
   const monthlyExpense = monthlyExpenseInput.value;
   const monthlyIncome = monthlyIncomeInput.value;
   const netIncome = CalcNetEarnings(monthlyIncome, monthlyExpense);
-  getStockData();
-  getStockData();
+  const investTime = timeToInvest(netIncome, monthlyExpense);
+
+  let output = document.querySelector("#netIncome");
+  output.innerHTML = netIncome;
+  output = document.querySelector("#netExpenses");
+  output.innerHTML = monthlyExpense;
+  output = document.querySelector("#independentTime"); 
+  output.innerHTML = investTime;
+
+  getEFund(monthlyExpense, netIncome, eFundSlider.value);
+  getRFund(monthlyExpense, netIncome, rFundSlider.value);
+
 });
 
 // Display the results for emergency fund
-function eFund(monthlyExpense, eFundVal, netIncome) {
-  const eFundCap = CalcFundCapacity(monthlyExpense, eFundVal);
+function getEFund(monthlyExpense, netIncome, months) {
+  const eFundCap = CalcFundCapacity(monthlyExpense, months);
   const eFundTime = CalculateMonths(eFundCap, netIncome);
+  let output = document.querySelector("#eFundCap");
+  output = document.querySelector("#eFundTime");
+  output.innerHTML = eFundCap;
+  output.innerHTML = eFundTime;
 }
 
 // Display the results for rainy day fund
-function rFund(netIncome, monthlyExpense, rFundVal) {
-  const rfundTime = CalculateMonths(rFundCap, netIncome);
-  const rFundCap = CalcFundCapacity(monthlyExpense, rFundVal);
+function getRFund(monthlyExpense, netIncome, months) {
+  const rFundCap = CalcFundCapacity(monthlyExpense, months);
+  const rFundTime = CalculateMonths(rFundCap, netIncome);
+  let output = document.querySelector("#rFundCap");
+  output = document.querySelector("#rFundTime");
+  ouput.innerHTML = rFundCap;
+  output.innerHTML = rFundTime;
 }
